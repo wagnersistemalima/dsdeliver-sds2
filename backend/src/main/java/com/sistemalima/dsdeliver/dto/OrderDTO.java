@@ -17,7 +17,7 @@ public class OrderDTO implements Serializable{
 	
 	// atributos basico
 	
-	private Long Id;
+	private Long id;
 	private String address;
 	private Double latitude;
 	private Double longitude;
@@ -39,7 +39,7 @@ public class OrderDTO implements Serializable{
 	// construtor com argumentos
 
 	public OrderDTO(Long id, String address, Double latitude, Double longitude, Instant moment, OrderStatus status) {
-		Id = id;
+		this.id = id;
 		this.address = address;
 		this.latitude = latitude;
 		this.longitude = longitude;
@@ -50,7 +50,7 @@ public class OrderDTO implements Serializable{
 	// construtor personalizado
 	
 	public OrderDTO(Order entity) {
-		this.Id = entity.getId();
+		this.id = entity.getId();
 		this.address = entity.getAddress();
 		this.latitude = entity.getLatitude();
 		this.longitude = entity.getLongitude();
@@ -62,11 +62,11 @@ public class OrderDTO implements Serializable{
 	// getters & setters
 
 	public Long getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(Long id) {
-		Id = id;
+		this.id = id;
 	}
 
 	public String getAddress() {
