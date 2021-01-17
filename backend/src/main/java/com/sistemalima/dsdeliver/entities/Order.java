@@ -113,6 +113,16 @@ public class Order implements Serializable{
 		return products;
 	}
 	
+	// metodo para calcular total de pedidos
+	
+	public Double getTotal() {
+		double soma=0.0;
+		for (Product pedido: products) {
+			soma += pedido.getPrice();
+		}
+		return soma;
+	}
+	
 	// hashCode & equals
 
 
